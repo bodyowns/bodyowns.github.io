@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-12 Mon 20:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Sebastian Noje Carusso" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-orgf02d3d6" class="outline-2">
+<h2 id="orgf02d3d6"><span class="section-number-2">1</span> Transport clerk interview questions and answers:</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org054adec" class="outline-3">
+<h3 id="org054adec"><span class="section-number-3">1.1</span> As Transport clerk position, please tell me about yourself?</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Introduce yourself.</li>
+<li>Discuss your key strengths and how they relate to the job.</li>
+<li>Talk about a few of your accomplishments.</li>
+<li>Talk about your current employer and then tell them how you see yourself fitting into a position at their company.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaf5bdff" class="outline-3">
+<h3 id="orgaf5bdff"><span class="section-number-3">1.2</span> As Transport clerk position, where do you see yourself in 5 years? Or what are your career goals?</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>I’m really excited by this position at Sainsbury's as in five years:</li>
+<li>I’d like to be seen as someone with deep expertise in the transport sector, and I know that’s something that I’ll have an opportunity to do here.</li>
+<li>I would be also really excited to take on more managerial responsibilities in the next few years and potentially even take the lead on some projects.</li>
+<li>I’ve been lucky enough to work with some amazing managers, and so developing into a great manager myself is something I’m really excited about.</li>
+<li>I would like to become the best in my department.</li>
+<li>I’d love to be the person my colleagues can rely on.</li>
+<li>I also feel I would be skilled and experienced enough to handle whatever responsibilities might come my way.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdf33555" class="outline-3">
+<h3 id="orgdf33555"><span class="section-number-3">1.3</span> Why should we hire you as Transport clerk position?</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Remember to be specific.</li>
+<li>Don’t generalize things, it doesn’t help</li>
+
+<li>Highlight the qualities that make you the most qualified for the position – present yourself as the candidate that solves their problem</li>
+<li>Let them know that you already know certain things about the company and their general practice because you have researched the firm and are prepared.</li>
+<li>Tell a success story that emphasizes your qualities and how they helped solve a problem similar to theirs.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8e9b829" class="outline-3">
+<h3 id="org8e9b829"><span class="section-number-3">1.4</span> What is the most difficult situation you have had to face and how did you tackle it?</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>In my last position, I was tasked with fixing a very broken website. So, I not only learned WordPress, but discovered other providers and learned that WooCommerce was not the best fit for our needs, and migrated the site over to Shopify. I had to teach myself a new programming language, as we had minimal resources or support within our organization.
+In any event, I got the site up and running and working better than ever!</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org89d6f83" class="outline-3">
+<h3 id="org89d6f83"><span class="section-number-3">1.5</span> What is your greatest strength as Transport clerk position?</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Being a problem solver</li>
+<li>Being a motivator</li>
+<li>Being a natural leader</li>
+<li>The ability to perform under pressure</li>
+<li>A positive attitude</li>
+<li>Loyalty</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org30f2a44" class="outline-3">
+<h3 id="org30f2a44"><span class="section-number-3">1.6</span> As Transport clerk position, what are your weaknesses?</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>I like to get things done right and perfect which that turns our that I am a perfectionist.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4d0e191" class="outline-3">
+<h3 id="org4d0e191"><span class="section-number-3">1.7</span> As Transport clerk position, how would your co-workers describe you?</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>Well, my colleagues will tell you they can count on me.</li>
+<li>They will tell you that I am a team player and someone they enjoy working with.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd8daf6c" class="outline-3">
+<h3 id="orgd8daf6c"><span class="section-number-3">1.8</span> When delegating a recent duty, plz describe how you showed your confidence in the person's ability to do the job?</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Discuss your method of assigning responsibility to the best candidates.</li>
+<li>How you communicate with employees to make them understand what is expected of them and how you make sure that the employees have the resources needed to carry out specific tasks.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd1ba137" class="outline-3">
+<h3 id="orgd1ba137"><span class="section-number-3">1.9</span> Why do you want to work for us as Transport clerk position?</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>Here, they just want to know how motivated you are about the position or if you are just there for the pay.</li>
+<li>They want to ascertain that you would form an important part of the company.</li>
+<li>You have to show them that you are willing to be part of the company and would do all you can to ensure you and the company grows together.</li>
+</ul>
+
+<p>
+• Talk about the things you like about the firm. This can only be possible if you have done your homework before the interview.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ff245a" class="outline-3">
+<h3 id="org7ff245a"><span class="section-number-3">1.10</span> As Transport clerk position, why do you wish to leave your present job?</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li>Your best bet is to ay it on responsibility and challenge and how your previous position want challenging you enough. Indicate that you yearn for more responsibility and how what you have to offer outweighs the responsibility and challenge posed by your former position.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb34959b" class="outline-3">
+<h3 id="orgb34959b"><span class="section-number-3">1.11</span> As Transport clerk position, what questions do you have for me?</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+About 3 in 4 candidates respond with a ‘No’ and this is a very poor response.
+</p>
+
+<p>
+This question is the perfect opportunity you need to show that you are different from every other candidate. Have a couple of questions prepared. It shows you are motivated and you have some knowledge about the company you are applying to
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69658f1" class="outline-3">
+<h3 id="org69658f1"><span class="section-number-3">1.12</span> Transport clerk interview tips:</h3>
+<div class="outline-text-3" id="text-1-12">
+</div>
+<div id="outline-container-org67688fc" class="outline-4">
+<h4 id="org67688fc"><span class="section-number-4">1.12.1</span> 1. Conduct research on the employer, hiring manager, and job opportunity</h4>
+</div>
+<div id="outline-container-org4fe48a5" class="outline-4">
+<h4 id="org4fe48a5"><span class="section-number-4">1.12.2</span> 2. Review common interview questions and prepare your responses related to Transport clerk position</h4>
+</div>
+<div id="outline-container-orga398f70" class="outline-4">
+<h4 id="orga398f70"><span class="section-number-4">1.12.3</span> 3. Dress for Success</h4>
+</div>
+<div id="outline-container-org5684f9c" class="outline-4">
+<h4 id="org5684f9c"><span class="section-number-4">1.12.4</span> 4: Overcome “job interview nervous“</h4>
+</div>
+<div id="outline-container-orgc8bfafe" class="outline-4">
+<h4 id="orgc8bfafe"><span class="section-number-4">1.12.5</span> 5. Arrive on Time, Relaxed and Prepared for the Interview</h4>
+</div>
+<div id="outline-container-orgf7a3f38" class="outline-4">
+<h4 id="orgf7a3f38"><span class="section-number-4">1.12.6</span> 6. Take evidence of your achievements related to Transport clerk position</h4>
+<div class="outline-text-4" id="text-1-12-6">
+</div>
+<ol class="org-ol">
+<li><a id="org4fac66f"></a>Achievements, Projects, etc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org0bac67c" class="outline-4">
+<h4 id="org0bac67c"><span class="section-number-4">1.12.7</span> 7. Focus more on what you can do for the company, rather than what they can do for you</h4>
+</div>
+<div id="outline-container-orgd5340a0" class="outline-4">
+<h4 id="orgd5340a0"><span class="section-number-4">1.12.8</span> 8. Make good first impressions</h4>
+</div>
+<div id="outline-container-orgd570a5a" class="outline-4">
+<h4 id="orgd570a5a"><span class="section-number-4">1.12.9</span> 9. Prep your greatest stories related to Transport clerk position</h4>
+</div>
+<div id="outline-container-org4e13539" class="outline-4">
+<h4 id="org4e13539"><span class="section-number-4">1.12.10</span> 10. Bring examples of your work</h4>
+<div class="outline-text-4" id="text-1-12-10">
+<ul class="org-ul">
+<li>Print Dashboard, Apps, Projects</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org364974d" class="outline-4">
+<h4 id="org364974d"><span class="section-number-4">1.12.11</span> <span class="todo TODO">TODO</span> 14. Thank Interviewer(s) in Person, by Email, or Postal Mail.</h4>
+<div class="outline-text-4" id="text-1-12-11">
+<p>
+Common courtesy and politeness demands hat you hank everyone that played a part in the interview. You should start while you’re there after which you should send thank you emails and notes to the hiring manager. This wouldn’t get you the job, but it’s an advantage over those that didn’t send.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58b76a3" class="outline-4">
+<h4 id="org58b76a3"><span class="section-number-4">1.12.12</span> <span class="todo TODO">TODO</span> 15. Follow up afterwards</h4>
+<div class="outline-text-4" id="text-1-12-12">
+<p>
+Your interview day shouldn’t be the last day they hear from you. Following up helps them remember who you are and as such, you won’t be forgotten even if you don’t get the position. Send a thank you note to them and an email shortly after that if you don’t hear from them. If this earns you a follow up interview, give it your best shot!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fa7384" class="outline-4">
+<h4 id="org6fa7384"><span class="section-number-4">1.12.13</span> <span class="todo TODO">TODO</span> 16. If you don’t get hired, find out why</h4>
+<div class="outline-text-4" id="text-1-12-13">
+<p>
+Even if you give it your best shot, it doesn’t mean that you will definitely be hired. A firm cannot hire everyone and if you happen to be among those that weren’t hired, try to find out why. This could help you in your next interview. Reflect on it, check for where you could have done better and use this to prepare for the next interview.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Sebastian Noje Carusso</p>
+<p class="date">Created: 2020-10-12 Mon 20:12</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
